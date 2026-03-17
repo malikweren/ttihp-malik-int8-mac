@@ -73,7 +73,7 @@ module tt_um_malik_mac_ripple (
 
     mac_8b_unsigned_and_accum_ripple_carry u_mac (
         .a(op_a),
-        .b(op_b),
+        .b((cmd == CMD_LOAD_B_GO) ? ui_in : op_b),  // use ui_in directly on LOAD_B_GO to avoid non-blocking reg delay
         .c(acc[15:0]),      // feed back lower 16 bits of accumulator
         .y(mac_result)
     );
