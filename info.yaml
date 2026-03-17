@@ -1,4 +1,6 @@
 # Tiny Tapeout project information
+yaml_version: 6
+
 project:
   title:        "Gate-Level 8-bit MAC with Ripple-Carry Accumulator"
   author:       "Malik"  # Replace with your full name
